@@ -1,0 +1,80 @@
+/* BASE STYLING အစ */
+:root {
+    --bg: #1e1e1e;
+    --sidebar: #2d2d2d;
+    --accent: #007acc;
+    --text: #ffffff;
+}
+
+body {
+    margin: 0; padding: 0;
+    background: #555;
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--text);
+    height: 100vh; display: flex; flex-direction: column;
+}
+
+.toolbar {
+    background: var(--sidebar);
+    padding: 10px 20px;
+    display: flex; gap: 20px;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+
+.tool-group {
+    display: flex; gap: 10px; align-items: center;
+    border-right: 1px solid #444; padding-right: 15px;
+}
+/* BASE STYLING အဆုံး */
+
+/* CANVAS & LAYERS အစ */
+.main-container {
+    display: flex; flex: 1; overflow: hidden;
+}
+
+.layers-panel {
+    width: 200px; background: var(--sidebar);
+    border-right: 1px solid #000; padding: 10px;
+}
+
+.workspace {
+    flex: 1; overflow: auto;
+    display: flex; justify-content: center; align-items: center;
+    padding: 50px;
+}
+
+#canvas {
+    background: white;
+    cursor: crosshair;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+/* CANVAS & LAYERS အဆုံး */
+
+/* LAYER ITEM STYLING အစ */
+.layer-item {
+    background: #3d3d3d; margin-bottom: 5px;
+    padding: 8px; border-radius: 4px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px;
+}
+
+.layer-btns button {
+    background: none; border: none; color: #ccc;
+    cursor: pointer; padding: 2px;
+}
+
+.layer-btns button:hover { color: var(--accent); }
+/* LAYER ITEM STYLING အဆုံး */
+
+/* SIDEBAR အစ */
+.sidebar {
+    position: fixed; right: -300px; top: 0;
+    width: 300px; height: 100%;
+    background: var(--sidebar);
+    transition: 0.3s; z-index: 100;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+}
+
+.sidebar.active { right: 0; }
+/* SIDEBAR အဆုံး */
